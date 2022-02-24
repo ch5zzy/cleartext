@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cleartext</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="header">
+			<h1 style="font-weight: 600; margin: 5px 0px 5px 0px">Cleartext</h1>
+			<h4 style="font-weight: 400; margin: 0px 0px 5px 0px">A text analysis tool that replaces less common words with more frequently used synonyms.</h4>
+			<div class="textarea-container">
+				<textarea id="word" placeholder="Enter a word, phrase, sentence, or passage."></textarea>
+			</div> <br>
+			<input id="intensity" type="range" min="1" max="1000" value="100" />
+			Replace words that appear <<span id="intensityValue"></span> words per million. Higher frequencies will replace more words.<br><br>
+			<button onClick="clearText($('#word').val()).then(e => PRINT(e))">Analyze</button> <br>
+			<span style="font-size: 11px">Powered by the <a href="https://www.datamuse.com/api/">Datamuse API</a>.</span>
+		</div>
+			<div id="loading">Please enter text to be analyzed into the area above.</div>
+			<div id="console">
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/word.js"></script>
+	</body>
+</html>

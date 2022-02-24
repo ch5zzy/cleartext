@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0px;
+  background-color: #252525;
+}
+
+.header {
+  background-color: #ffa390;
+  padding: 10px;
+}
+.header .textarea-container {
+  position: relative;
+}
+.header .textarea-container::after {
+  pointer-events: none;
+  content: "↓";
+  font-size: 14px;
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  bottom: 2px;
+  right: 0px;
+  z-index: 2;
+  background-color: #d78b7c;
+}
+.header input[type="text"], .header textarea {
+  background-color: #d78b7c;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+.header input[type="range"] {
+  height: 10px;
+  width: 100%;
+  background-color: #d78b7c;
+}
+.header input[type="range"]::-webkit-slider-thumb, .header input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #b37266;
+  border: none;
+}
+.header button {
+  background-color: #f7c4ba;
+  font-weight: 600;
+  padding: 10px;
+  border: 0px;
+  cursor: pointer;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #e06046;
+}
+
+#console, #loading {
+  background-color: #252525;
+  padding: 10px;
+  color: white;
+  min-height: 50px;
+}
